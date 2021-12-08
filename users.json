@@ -1,0 +1,9 @@
+{
+    "users":[
+        {"name":"Vova","password":"1234567890"},
+        {"name": "Vitya", "password": "qwerty69"},
+        {"name": "Kolya", "password": "0987654321res"},
+        {"name": "Artem", "password": "546738flca"}
+    ]
+}
+       
