@@ -62,16 +62,12 @@ def add_transaction(username, amount):
             user_transaction.write(json.dumps(transaction)+ '\n')
 
 def start():
+    try:
+        username = login(input("Enter name: "), input("Enter password: "))
+    except LoginException:
+        print("Invalid username or password. Try again")
+        return
     while True:
-            try:
-                username = login(input("Enter name: "), input("Enter password: "))
-            except LoginException:
-                print("Invalid username or password. Try again")
-            else:
-                break
-    while True:
-            
-        
         menu = input("Enter operation: \n1.My balance \n2.Withdraw money \n3.Put money \n4.Exit\n ")
         if menu == "1":
             print(f"Your balance: {get_balance(username)}")
